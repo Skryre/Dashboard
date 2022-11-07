@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Silkscreen&display=swap');
+
+@mixin flexCenter() {
+    display: flex;
+    align-items: center;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #2f2f2f;
+    color: #bb86FC;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    margin: 0px;
+
+    .leftside {
+        margin: 0px;
+        padding: 10px;
+        width: 18%;
+        background-color: #121212;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .title{
+            @include flexCenter();
+            h2 {
+                padding-left: 10px;
+            }
+        }
+
+        .padding {
+            padding-top: 50px;
+        }
+
+        .flex{
+            padding-left: 20px;
+            @include flexCenter();
+            p {
+                padding-left: 15px;
+            }
+        }
+        .credit {
+            font-size: 11.5px;
+            a {
+                text-decoration: none;
+                color: #bb86FC;
+            }
+            p {
+                margin: 5px auto;
+            }
+        }
+    }
+    
+    .rightside {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        .header {
+            width: 100%;
+            height: 20%;
+            background-color: #252525;
+            box-shadow: 0px 5px 5px 0px #252525;
+            .search{
+                height: 50%;
+                width: 100%;
+                @include flexCenter();
+                justify-content: space-evenly;
+                div {
+                    background-color: #5e5e5e;
+                    height: 22px;
+                    width: 60%;
+                    border-radius: 20px;
+                }
+            }
+            .profile{
+                height: 50%;
+                width: 100%;
+                @include flexCenter();
+                justify-content: space-between;
+
+                .right {
+                    display: flex;
+                    width: 38%;
+                    justify-content: space-evenly;
+                    .hi {
+                        h2{
+                            margin-top: 0;
+                        }
+                        p{
+                            margin-bottom: 0;
+                        }
+    
+                    }
+                    .cat{
+                        width: 65px;
+                        height: 65px;
+                        border-radius: 40px;
+                        @include flexCenter();
+                        justify-content: center;
+                        background-color: #03DAC6;
+                        img {
+                            width: 43px;
+                        }
+                    }
+                }
+                .left {
+                    display: flex;
+                    width: 40%;
+                    justify-content: space-evenly;
+                    div {
+                        @include flexCenter();
+                        justify-content: center;
+                        background-color: #CF6679;
+                        width: 80px;
+                        height: 28px;
+                        border-radius: 40px;
+                        color: #121212;
+                        font-weight: 1200;
+                    }
+                }
+            }
+        }
+        .content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            .project {
+                width: 65%;
+                height: auto;
+                padding-left: 20px;
+                display: flex;
+                flex-direction: column;
+                padding-top: 10px;
+                .container {
+                    display: grid;
+                    width: 98%;
+                    height: 90%;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: repeat(3, 1fr);
+                    gap: 10px;
+                    .items{
+                        background-color: #252525;
+                        border-radius: 10px;
+                        p {
+                            padding-top: 15px;
+                            padding-left: 15px;
+                        }
+                        .text {
+                            font-size: 13px;
+                            padding-left: 15px;
+                            padding-right: 15px;
+                            color: rgb(182, 182, 182);
+                        }
+                        .icons {
+                            display: flex;
+                            justify-content: flex-end;
+                            padding-top: 15px;
+                            svg {
+                                padding-right: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+            .other {
+                width: 35%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                .announcements{
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    height: 50%;
+                    padding-top: 10px;
+                    .container2{
+                        background-color: #252525;
+                        border-radius: 10px;
+                        width: 95%;
+                        .border{
+                            border-bottom: solid rgb(182, 182, 182) 1px;
+                            border-top: solid rgb(182, 182, 182) 1px;
+                        }
+                        .content2 {
+                            display: flex;
+                            flex-direction: column;
+                            margin: 0 10px;
+                            h4 {
+                                margin-bottom: 0;
+                                margin-top: 15px;
+                            }
+                            p {
+                                font-size: 12.3px;
+                                color: rgb(182, 182, 182);
+                                margin-top: 0;
+                                margin-bottom: 15px;
+                            }
+                        }
+                    }
+                }
+                .trending {
+                    width: 95%;
+                    height: 45%;
+                    .position{
+                        background-color: #252525;
+                        border-radius: 10px;
+                        .picture{
+                            display: flex;
+                            align-items: center;
+                            padding: 12px 40px;
+                            .img2 {
+                                width: 38px;
+                                height: 38px;
+                                border-radius: 40px;
+                                @include flexCenter();
+                                justify-content: center;
+                                background-color: #03DAC6;
+                                img {
+                                    width: 28px;
+                                }
+                            }
+                            .text2 {
+                                display: flex;
+                                flex-direction: column;
+                                padding-left: 30px;
+                                h4 {
+                                    margin: 0;
+                                }
+                                p {
+                                    margin: 0;
+                                    font-size: 12.3px;
+                                    color: rgb(182, 182, 182);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+svg{
+    cursor: pointer;
+}
